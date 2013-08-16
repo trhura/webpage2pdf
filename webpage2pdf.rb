@@ -26,4 +26,5 @@ app.add_webpage ARGV.first
 #app.right_margin = 50
 #app.bottom_margin = 50
 #app.top_margin = 50
+
 app.run
