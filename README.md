@@ -10,11 +10,12 @@ About
 $ git clone https://github.com/trhura/webpage2pdf.git
 $ cd webpage2pdf
 $ bundle install
-$ /webpage2pdf.rb
+$ ./webpage2pdf 'http://www.google.com'
+(or)
+$ ruby webpage2pdf 'http://www.google.com'
 ```
+Run the script, the webpage will be saved as pdf using its title as filename.
 
-
-TODO
-====
+## TODO
 
 * Lots of stuff
