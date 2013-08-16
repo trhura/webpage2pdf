@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ffi (1.9.0)
+    gir_ffi (0.6.6)
+      ffi (~> 1.8)
+      indentation (~> 0.0.6)
+    gir_ffi-gtk (0.6.0)
+      gir_ffi (~> 0.6.0)
+    indentation (0.0.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  gir_ffi
+  gir_ffi-gtk
