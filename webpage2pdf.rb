@@ -19,6 +19,9 @@ end
 
 check_argv
 
-app = App.new ARGV.first
+app = App.new
+app.add_webpage ARGV.first
 #app.zoom_level = 1.3
+#app.left_margin = 10
+app.right_margin = 50
 app.run

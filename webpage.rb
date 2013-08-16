@@ -5,13 +5,13 @@ require 'gir_ffi'
 GirFFI.setup :WebKit
 
 class WebPage
-    attr_reader :webview
+    attr_reader :webview, :pagesetup
+    attr_writer :pagesetup
 
     def initialize(uri)
         @uri = uri
         @webview = WebKit::WebView.new
         @webview.load_uri uri
-
         @webview.signal_connect 'notify::load-status' do on_load_status_changed end
         @webview.signal_connect 'notify::progress' do on_progress_changed end
 
@@ -33,6 +33,7 @@ class WebPage
         when :finished
             puts "\nLoading finished."
             printoperation = Gtk::PrintOperation.new
+            printoperation.set_default_page_setup @pagesetup
             filename = @webview.get_title + '.pdf'
             printoperation.set_export_filename filename
 
