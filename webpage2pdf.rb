@@ -23,5 +23,7 @@ app = App.new
 app.add_webpage ARGV.first
 #app.zoom_level = 1.3
 #app.left_margin = 10
-app.right_margin = 50
+#app.right_margin = 50
+#app.bottom_margin = 50
+#app.top_margin = 50
 app.run

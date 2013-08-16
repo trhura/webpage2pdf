@@ -2,7 +2,9 @@ require 'gir_ffi-gtk3'
 require './webpage.rb'
 
 module Settings
-    attr_reader :zoom_level, :left_margin, :right_margin
+    attr_reader :zoom_level
+    attr_reader :left_margin, :right_margin
+    attr_reader :top_margin, :bottom_margin
 
     def zoom_level=(zoom_level)
         @zoom_level = zoom_level
@@ -12,11 +14,23 @@ module Settings
     end
 
     def left_margin=(left_margin)
-        @pagesetup.set_left_margin left_margin, :mm
+        @left_margin = left_margin
+        @pagesetup.set_left_margin @left_margin, :mm
     end
 
     def right_margin=(right_margin)
-        @pagesetup.set_right_margin right_margin, :mm
+        @right_margin = right_margin
+        @pagesetup.set_right_margin @right_margin, :mm
+    end
+
+    def top_margin=(top_margin)
+        @top_margin = top_margin
+        @pagesetup.set_top_margin @top_margin, :mm
+    end
+
+    def bottom_margin=(bottom_margin)
+        @bottom_margin = bottom_margin
+        @pagesetup.set_bottom_margin @bottom_margin, :mm
     end
 end
 
@@ -28,7 +42,6 @@ class App
         trap("SIGINT") { quit }
 
         @webpages = []
-        @zoom_level = 1
         @pagesetup = Gtk::PageSetup.new
     end
 
