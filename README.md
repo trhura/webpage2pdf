@@ -11,6 +11,11 @@ Usage
 
         gem install gir_ffi gir_ffi-gtk
 
+* Make sure gir data for webkit is installed on your system. `gir1.2-webkit-3.0` for ubuntu.
+
+        root @ ~$ dpkg -s gir1.2-webkit-3.0 | grep -i status
+        Status: install ok installed
+
 *  Run the script, the webpage will be saved as pdf using its title as filename.
 
         ./webpage2pdf 'http://www.google.com'
