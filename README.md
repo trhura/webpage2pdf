@@ -4,16 +4,14 @@ About
  This is a ruby script I wrote to get familiar with the ruby language.
  Currently, it can fetch webpages and save as pdf.
 
-Usage
-=====
 
-*  Install `gir_ffi` and `gir_ffi-gtk` gems.
+## Quick Start
+```bash
+$ git clone https://github.com/trhura/webpage2pdf.git
+$ cd webpage2pdf
+$ bundle install
+$ /webpage2pdf.rb
 
-        gem install gir_ffi gir_ffi-gtk
-
-*  Run the script, the webpage will be saved as pdf using its title as filename.
-
-        ./webpage2pdf 'http://www.google.com'
 
 TODO
 ====
