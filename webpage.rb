@@ -5,6 +5,8 @@ require 'gir_ffi'
 GirFFI.setup :WebKit
 
 class WebPage
+    attr_reader :webview
+
     def initialize(uri)
         @uri = uri
         @webview = WebKit::WebView.new

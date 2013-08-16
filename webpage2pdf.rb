@@ -20,4 +20,5 @@ end
 check_argv
 
 app = App.new ARGV.first
+#app.zoom_level = 1.3
 app.run
