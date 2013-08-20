@@ -51,7 +51,7 @@ class WebPage
     end
 
     def on_progress_changed
-        progress = object.get_property 'progress'
+        progress = @webview.get_property 'progress'
         percent  = (progress * 100).round
         STDOUT.write "\rLoading page #{percent}% ..."
     end
